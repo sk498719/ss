@@ -1,0 +1,102 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        sand: {
+          50: '#FAF8F5',
+          100: '#F5F0EA',
+          200: '#EBE3D8',
+          300: '#DDD2C1',
+          400: '#C4B5A0',
+          500: '#A89882',
+          600: '#8C7D68',
+          700: '#6B5F4D',
+          800: '#4A4236',
+          900: '#2D2824',
+        },
+        sage: {
+          50: '#F4F6F2',
+          100: '#E6EBE2',
+          200: '#CDD7C5',
+          300: '#B0C1A4',
+          400: '#8FA87D',
+          500: '#7C8C6E',
+          600: '#637158',
+          700: '#4E5946',
+          800: '#3B4335',
+          900: '#2A3027',
+        },
+        terracotta: {
+          50: '#FBF4F0',
+          100: '#F5E4DA',
+          200: '#EBC9B5',
+          300: '#DBA98A',
+          400: '#C17B5F',
+          500: '#A86A4F',
+          600: '#8B5640',
+          700: '#6E4433',
+          800: '#533427',
+          900: '#3A241B',
+        },
+        charcoal: {
+          50: '#F5F5F5',
+          100: '#E8E8E8',
+          200: '#D1D1D1',
+          300: '#B0B0B0',
+          400: '#888888',
+          500: '#6B6B6B',
+          600: '#525252',
+          700: '#3D3D3D',
+          800: '#2D2D2D',
+          900: '#1A1A1A',
+        },
+      },
+      fontFamily: {
+        sans: ['"Shippori Mincho B1"', 'Georgia', 'serif'],
+        mono: ['"Geist Mono"', 'ui-monospace', 'monospace'],
+      },
+      borderRadius: {
+        DEFAULT: '5px',
+        'sm': '3px',
+        'md': '5px',
+        'lg': '5px',
+        'xl': '5px',
+        '2xl': '5px',
+        '3xl': '5px',
+        'full': '9999px',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.8s ease-out forwards',
+        'fade-up': 'fadeUp 0.8s ease-out forwards',
+        'slide-in': 'slideIn 0.6s ease-out forwards',
+        'breathe': 'breathe 6s ease-in-out infinite',
+        'float': 'float 8s ease-in-out infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        fadeUp: {
+          '0%': { opacity: '0', transform: 'translateY(24px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideIn: {
+          '0%': { opacity: '0', transform: 'translateX(-24px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        breathe: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.03)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
+      },
+    },
+  },
+  plugins: [],
+};

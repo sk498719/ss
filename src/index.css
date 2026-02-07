@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-sand-50 text-charcoal-800 font-sans font-normal text-[14px];
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-mono font-normal tracking-normal;
+  }
+
+  ::selection {
+    @apply bg-sage-200 text-charcoal-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-2.5 bg-charcoal-800 text-white
+           font-mono font-normal text-[12px] uppercase tracking-wide
+           transition-all duration-200 ease-out
+           hover:bg-charcoal-900
+           focus:outline-none active:scale-[0.98] rounded-[3px];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-2.5
+           border border-charcoal-200 text-charcoal-700 bg-white
+           font-mono font-normal text-[12px] uppercase tracking-wide
+           transition-all duration-200 ease-out
+           hover:border-charcoal-400
+           focus:outline-none active:scale-[0.98] rounded-[3px];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-4 py-2
+           text-charcoal-500 bg-transparent
+           font-mono font-normal text-[12px] uppercase tracking-wide
+           transition-colors duration-200 ease-out
+           hover:text-charcoal-800
+           focus:outline-none;
+  }
+
+  .section-padding {
+    @apply px-5 md:px-8 lg:px-12 py-16 md:py-24;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+  .animate-delay-600 { animation-delay: 600ms; }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pageEnter {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .page-transition {
+    animation: pageEnter 0.4s ease-out;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #FAF8F5 inset;
+  -webkit-text-fill-color: #2D2D2D;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1D1D1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B0B0B0;
+}
